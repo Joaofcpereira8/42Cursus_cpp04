@@ -16,7 +16,12 @@
 # include "Animal.hpp"
 
 class Cat: public Animal{
-
+	public:
+		Cat();
+		Cat(const Cat& miniCat);
+		Cat &operator=(const Cat& copyCat);
+		~Cat();
+		void makeSound() const;
 };
 
 #endif //CAT_HPP

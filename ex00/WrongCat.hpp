@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jofilipe <jofilipe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/09 16:30:47 by jofilipe          #+#    #+#             */
-/*   Updated: 2024/08/09 16:30:48 by jofilipe         ###   ########.fr       */
+/*   Created: 2024/08/12 12:26:21 by jofilipe          #+#    #+#             */
+/*   Updated: 2024/08/12 12:26:22 by jofilipe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#ifndef WRONGCAT_HPP
+# define WRONGCAT_HPP
 
-# include "Animal.hpp"
+# include "WrongAnimal.hpp"
 
-class Dog: public Animal{
-	public:
-		Dog();
-		Dog(const Dog& miniDog);
-		Dog &operator=(const Dog& copyDog);
-		~Dog();
-		void makeSound() const;
+class WrongCat: public WrongAnimal{
+public:
+	WrongCat();
+	WrongCat(const WrongCat& miniWrongCat);
+	WrongCat &operator=(const WrongCat& copyWrongCat);
+	~WrongCat();
+	void makeSound() const;
 };
 
-#endif //DOG_HPP
+#endif //WRONGCAT_HPP

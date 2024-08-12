@@ -22,7 +22,9 @@ class Animal {
 		Animal();
 		Animal(const Animal& ani);
 		Animal &operator=(const Animal& ani);
-		~Animal();
+		virtual ~Animal();
+		std::string getType() const;
+		virtual void makeSound(void) const;
 };
 
 #endif //ANIMAL_HPP

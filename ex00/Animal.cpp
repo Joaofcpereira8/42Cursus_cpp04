@@ -21,10 +21,18 @@ Animal::Animal(const Animal &ani): type(ani.type) {
 }
 
 Animal &Animal::operator=(const Animal &ani) {
-	std::cout << "Copy operator called" << std::endl;
+	std::cout << "Animal copy operator called" << std::endl;
 	if (this != &ani)
 		type = ani.type;
 	return *this;
+}
+
+void Animal::makeSound() const{
+	std::cout << "Animal sound" << std::endl;
+}
+
+std::string Animal::getType() const{
+	return type;
 }
 
 Animal::~Animal() {
