@@ -13,8 +13,9 @@
 #include "Cat.hpp"
 
 Cat::Cat() {
-	std::cout << "Cat constructor called" << std::endl;
+	std::cout << YELLOW <<"Cat constructor called" << RESET << std::endl;
 	type = "Cat";
+	brain = new Brain();
 }
 
 Cat::Cat(const Cat &miniCat) {
@@ -30,9 +31,10 @@ Cat &Cat::operator=(const Cat &copyCat) {
 }
 
 Cat::~Cat() {
-	std::cout << "Cat destructor called" << std::endl;
+	delete brain;
+	std::cout << GREEN << "Cat destructor called" << RESET << std::endl;
 }
 
 void Cat::makeSound() const{
-	std::cout << "Miau Miau" << std::endl;
+	std::cout << YELLOW << "Miau Miau" << RESET << std::endl;
 }

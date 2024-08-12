@@ -16,21 +16,27 @@
 
 int main()
 {
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound(); //will output the cat sound!
-	j->makeSound();
-	meta->makeSound();
+	const Animal* Joli[10];
+	int x = 0;
 
-	const WrongAnimal* wrong = new WrongCat();
-	wrong->makeSound();
-
-	delete wrong;
-	delete meta;
-	delete j;
-	delete i;
-	return 0;
+	while(x < 10)
+	{
+	 if (x % 2 == 0)
+	   Joli[x] = new Cat();
+	 else
+		 Joli[x] = new Dog();
+	 x++;
+	}
+	x = 0;
+	while (x < 10)
+	{
+		 Joli[x]->makeSound();
+		 x++;
+	}
+	x = 0;
+	while(x < 10)
+	{
+		 delete Joli[x];
+		 x++;
+	}
 }

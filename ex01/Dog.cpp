@@ -14,7 +14,8 @@
 
 Dog::Dog() {
 	type = "Dog";
-	std::cout << "Dog constructor called" << std::endl;
+	std::cout << BLUE << "Dog constructor called" << RESET << std::endl;
+	brain = new Brain();
 }
 
 Dog::Dog(const Dog &miniDog) {
@@ -30,7 +31,8 @@ Dog &Dog::operator=(const Dog &copyDog) {
 }
 
 Dog::~Dog() {
-	std::cout << "Dog destructor called" << std::endl;
+	delete brain;
+	std::cout << RED << "Dog destructor called" << RESET << std::endl;
 }
 
 void Dog::makeSound() const{

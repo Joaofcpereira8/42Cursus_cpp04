@@ -16,8 +16,7 @@ Animal::Animal() {
 	std::cout << "Animal constructor called" << std::endl;
 }
 
-Animal::Animal(const Animal &ani) {
-	*this = ani;
+Animal::Animal(const Animal &ani): type(ani.type) {
 	std::cout << "Copy constructor called" << std::endl;
 }
 
