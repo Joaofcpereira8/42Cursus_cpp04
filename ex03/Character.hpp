@@ -20,7 +20,7 @@ class Character: public ICharacter {
 		Character();
 		Character(std::string charName);
 		Character(const Character& idemName);
-		Character &operator=(const Character& copyCharec);
+		Character &operator=(const Character& copyChar);
 		~Character();
 };
 
