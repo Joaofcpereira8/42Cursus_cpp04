@@ -13,8 +13,9 @@
 #include "Dog.hpp"
 
 Dog::Dog() {
-	type = "Dog";
 	std::cout << "Dog constructor called" << std::endl;
+	type = "Dog";
+	brain = new Brain();
 }
 
 Dog::Dog(const Dog &miniDog) {

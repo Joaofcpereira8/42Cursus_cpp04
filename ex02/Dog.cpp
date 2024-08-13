@@ -6,7 +6,7 @@
 /*   By: jofilipe <jofilipe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/09 15:49:18 by jofilipe          #+#    #+#             */
-/*   Updated: 2024/08/09 15:49:19 by jofilipe         ###   ########.fr       */
+/*   Updated: 2024/08/13 15:00:27 by jofilipe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,14 @@ Dog::Dog() {
 
 Dog::Dog(const Dog &miniDog) {
 	*this = miniDog;
+	brain = NULL;
 	std::cout << "Dog copy constructor called" << std::endl;
 }
 
 Dog &Dog::operator=(const Dog &copyDog) {
 	std::cout << "Dog copy operator called" << std::endl;
 	if (this != &copyDog)
-		*this = copyDog;
+		brain = new Brain(*copyDog.brain);
 	return *this;
 }
 

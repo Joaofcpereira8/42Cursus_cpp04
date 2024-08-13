@@ -6,7 +6,7 @@
 /*   By: jofilipe <jofilipe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/09 15:49:26 by jofilipe          #+#    #+#             */
-/*   Updated: 2024/08/09 15:49:27 by jofilipe         ###   ########.fr       */
+/*   Updated: 2024/08/13 15:00:52 by jofilipe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include "AAnimal.hpp"
 # include "Brain.hpp"
 
-class Cat: public AAnimal{
+class Cat: public AAnimal {
 	private:
 		Brain* brain;
 	public:
