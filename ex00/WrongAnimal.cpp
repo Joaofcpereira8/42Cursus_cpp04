@@ -13,12 +13,12 @@
 #include "WrongAnimal.hpp"
 
 WrongAnimal::WrongAnimal() {
-	std::cout << "Wrong Animal constructor called" << std::endl;
+	std::cout << "WrongAnimal constructor called" << std::endl;
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal &wrongAni) {
 	type = wrongAni.type;
-	std::cout << "Wrong Animal copy constructor called" << std::endl;
+	std::cout << "WrongAnimal copy constructor called" << std::endl;
 }
 
 WrongAnimal &WrongAnimal::operator=(const WrongAnimal &wrongAni) {
